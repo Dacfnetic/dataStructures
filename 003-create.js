@@ -1,4 +1,4 @@
-/*class MyArray {
+class MyArray {
     constructor(){
         this.length = 0,
         this.data = {};
@@ -17,15 +17,15 @@
         this.length--;
         return lastItem;
     }
-    delete(index){
+   /* delete(index){
         const item = this.data[index];
         this.shiftItems(index);
     }
     shiftItems(index){
         for ()
-    }
-}*/
-/*
+    }*/
+}
+
 const newArray = new MyArray();
 console.log(newArray);
 console.log(newArray.get(0));
@@ -42,14 +42,22 @@ console.log(newArray.pop());
 console.log(newArray);
 console.log(newArray.pop());
 console.log(newArray);
-*/
+
 let cadena = 'Tengo mucha hambre, necesito comida';
-reverse = (frase) =>{
-    let myArray2 = frase.split('');
-    let resultado = [];
-    for(let i = myArray2.length; i>0;i--){
-        resultado.push(myArray2[i]);
-    }
-    return resultado.join('');
+
+rever = (frase) =>{
+    return frase.split('').reverse().join('').toString();
 }
-console.log(reverse(cadena).toString());
+console.log(rever(cadena));
+
+
+
+let numbers = [[1,23,43,33], [11,33,24,53,33,23]];
+
+let flat = numbers.reduce((acumulator, elemento) => acumulator.concat(elemento), []);
+
+flat.sort((a,b) => a-b);
+
+const arr = flat.filter((item,index)=> flat.indexOf(item) === index);
+
+console.log (arr);
